@@ -3,6 +3,9 @@ $json = '[{"status":400,"msg":"parameter d is required."}]';
 if(isset($_POST['d'])){
     $json = $_POST['d'];
 }
+if(isset($_GET['d'])){
+    $json = $_GET['d'];
+}
 //-- Content-Type
 header('Content-Type: ' . 'text/plane');
 //-- ウェブブラウザが独自にMIMEタイプを判断する処理を抑止する
