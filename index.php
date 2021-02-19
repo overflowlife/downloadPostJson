@@ -7,13 +7,13 @@ if(isset($_GET['d'])){
     $json = $_GET['d'];
 }
 //-- Content-Type
-header('Content-Type: ' . 'text/plane');
+header('Content-Type: text/plain');
 //-- ウェブブラウザが独自にMIMEタイプを判断する処理を抑止する
 header('X-Content-Type-Options: nosniff');
 //-- ダウンロードファイルのサイズ
 header('Content-Length: ' . strlen($json));
 //-- ダウンロード時のファイル名
-header('Content-Disposition: attachment; filename="' . 'content.json' . '"');
+header('Content-Disposition: attachment; filename="content.json"');
 //-- keep-aliveを無効にする
 header('Connection: close');
 //-- readfile()の前に出力バッファリングを無効化する ※詳細は後述
