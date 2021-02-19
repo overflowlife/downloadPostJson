@@ -6,6 +6,13 @@ if(isset($_POST['d'])){
 if(isset($_GET['d'])){
     $json = $_GET['d'];
 }
+/*Thanks to
+--------------------------------------------------------
+|                                                      |
+| https://qiita.com/fallout/items/3682e529d189693109eb |
+|                                                      |
+--------------------------------------------------------
+*/
 //-- Content-Type
 header('Content-Type: text/plain');
 //-- ウェブブラウザが独自にMIMEタイプを判断する処理を抑止する
